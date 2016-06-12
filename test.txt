@@ -1,5 +1,0 @@
-This is a test to check the automatic deployment of updates to my website using git webhooks on github.com
-
-Lets see if it works now.
-
-Lets try this again -__-
