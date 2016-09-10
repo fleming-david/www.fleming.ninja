@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="zoompan.css">
+    <title> CS482 - Homework 1</title>
+  </head>
+
+  <body>
+    <h1>CS482 - Homework 1</h1>
+    <h3> David Fleming</h3>
+    <p><a href="hw1/hw1.py">Python code</a></p>
+    <p><a href="hw1/davidfleming_hw1.zip">All Files</a></p>
+    <table>
+      <tr>
+        <th>Filtering</th>
+        <th></th>
+        <th colspan="2">Derivatives (X, Y)</th>
+        <th>Magnitude</th>
+      </tr>
+      <tr>
+        <th>Original Image</th>
+        <th><div class="tile" data-scale="2.4" data-image="./hw1/image.jpg"></div></th>
+        <th><div class="tile" data-scale="2.4" data-image="./hw1/deriatives/imageX.jpg"></div></th>
+        <th><div class="tile" data-scale="2.4" data-image="./hw1/deriatives/imageY.jpg"></div></th>
+        <th><div class="tile" data-scale="2.4" data-image="./hw1/magnitude/image.jpg"></div></th>
+      </tr>
+      <tr>
+        <th>Gaussian smoothing (Kernel: (15, 15); &sigma; = 1</th>
+        <th><div class="tile" data-scale="2.4" data-image="./hw1/blurred/imageBlurred1.jpg"></div></th>
+        <th><div class="tile" data-scale="2.4" data-image="./hw1/deriatives/imageBlurred1X.jpg"></div></th>
+        <th><div class="tile" data-scale="2.4" data-image="./hw1/deriatives/imageBlurred1Y.jpg"></div></th>
+        <th><div class="tile" data-scale="2.4" data-image="./hw1/magnitude/imageBlurred1.jpg"></div></th>
+      </tr>
+      <tr>
+        <th>Gaussian smoothing (Kernel: (15, 15); &sigma; = 2</th>
+        <th><div class="tile" data-scale="2.4" data-image="./hw1/blurred/imageBlurred2.jpg"></div></th>
+        <th><div class="tile" data-scale="2.4" data-image="./hw1/deriatives/imageBlurred2X.jpg"></div></th>
+        <th><div class="tile" data-scale="2.4" data-image="./hw1/deriatives/imageBlurred2Y.jpg"></div></th>
+        <th><div class="tile" data-scale="2.4" data-image="./hw1/magnitude/imageBlurred2.jpg"></div></th>
+      </tr>
+      <tr>
+        <th>Gaussian smoothing (Kernel: (15, 15); &sigma; = 3</th>
+        <th><div class="tile" data-scale="2.4" data-image="./hw1/blurred/imageBlurred3.jpg"></div></th>
+        <th><div class="tile" data-scale="2.4" data-image="./hw1/deriatives/imageBlurred3X.jpg"></div></th>
+        <th><div class="tile" data-scale="2.4" data-image="./hw1/deriatives/imageBlurred3Y.jpg" ></div></th>
+        <th><div class="tile" data-scale="2.4" data-image="./hw1/magnitude/imageBlurred3.jpg"></div></th>
+      </tr>
+    </table>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="zoompan.js"></script> 
+  </body>
+</html>
