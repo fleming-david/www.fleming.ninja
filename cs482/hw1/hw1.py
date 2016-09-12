@@ -2,16 +2,14 @@
 import numpy
 import cv2
 
-KERNEL = (15, 15)
-
 img = cv2.imread('image.jpg', cv2.IMREAD_COLOR)
 
 cv2.namedWindow('Image', cv2.WINDOW_AUTOSIZE)
 cv2.imshow('Image', img)
 
-imgBlurred1 = cv2.GaussianBlur(img, KERNEL, 1)
-imgBlurred2 = cv2.GaussianBlur(img, KERNEL, 2)
-imgBlurred3 = cv2.GaussianBlur(img, KERNEL, 3)
+imgBlurred1 = cv2.GaussianBlur(img, (7, 7), 1)
+imgBlurred2 = cv2.GaussianBlur(img, (13, 13), 2)
+imgBlurred3 = cv2.GaussianBlur(img, (19, 19), 3)
 
 imgDerivativesX = cv2.Sobel(img, cv2.CV_64F, 1, 0)
 imgDerivativesY = cv2.Sobel(img, cv2.CV_64F, 0, 1)
