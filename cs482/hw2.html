@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="zoompan.css">
+    <title> CS482 - Homework 2</title>
+  </head>
+
+  <body>
+    <h1>CS482 - Homework 2</h1>
+    <h3> David Fleming</h3>
+    <p><a href="hw2/hw2.py">Python code</a></p>
+    <p><a href="hw2/davidfleming_hw2.zip">All Files</a></p>
+    <h4>Reasoning</h4>
+    <p>For the Gaussian blur I went with a kernel of 7x7 and a &sigma; of 1 just to give the image a soft blur. For canny I found that a threshold of 80, 120 gave mostly good results in that there were not to many details missing but also not to much texture left. Although this did cause the hough transforms to possibly miss some lines it provented a flood of useless lines caused by texture. For the traditional Hough transform a resolution of 1 pixal was selected for &rho; and a resolution of 1 degree for &theta; which seemed to miss the fewest lines, at least with these images. A threshold of 150 was used for the accumulator as it seemed to select larger continuous lines and ignored the texture detials on the walls. For the probabilistic Hough transform the same resolution was used for &rho; and &theta; however a threshold of 75 was used in combination with a minimum length of 100 pixels and and a maximum line gap of 15. These settings seemed to give the best lines while ignoring texture, if the max gap is incread the lines do get longer however there are few lines, and if the min length is decreased the result is more texture lines are detected.</p>
+    <p>The different between the traditional Hough transform and the probabilistic Hough transform are small when it comes to the output of the lines, and any differences are probably more likely due to differences in thresholding. They both might not have found exactly all the same edges but they did find the important ones.</p>
+    <table>
+      <tr>
+        <th>Original</th>
+        <th>Blurred</th>
+        <th>Canny</th>
+        <th>Hough Transform</th>
+        <th>Probabilistic Hough Transform</th>
+      </tr>
+      <tr>
+        <th><div class="tile" data-scale="2.4" data-image="./hw2/turn-in/ST2MainHall4025.jpg"></div></th>
+        <th><div class="tile" data-scale="2.4" data-image="./hw2/turn-in/ST2MainHall4025_blurred.jpg"></div></th>
+        <th><div class="tile" data-scale="2.4" data-image="./hw2/turn-in/ST2MainHall4025_canny.jpg"></div></th>
+        <th><div class="tile" data-scale="2.4" data-image="./hw2/turn-in/ST2MainHall4025_huff.jpg"></div></th>
+        <th><div class="tile" data-scale="2.4" data-image="./hw2/turn-in/ST2MainHall4025_huffp.jpg"></div></th>
+      </tr>
+      <tr>
+        <th><div class="tile" data-scale="2.4" data-image="./hw2/turn-in/ST2MainHall4026.jpg"></div></th>
+        <th><div class="tile" data-scale="2.4" data-image="./hw2/turn-in/ST2MainHall4026_blurred.jpg"></div></th>
+        <th><div class="tile" data-scale="2.4" data-image="./hw2/turn-in/ST2MainHall4026_canny.jpg"></div></th>
+        <th><div class="tile" data-scale="2.4" data-image="./hw2/turn-in/ST2MainHall4026_huff.jpg"></div></th>
+        <th><div class="tile" data-scale="2.4" data-image="./hw2/turn-in/ST2MainHall4026_huffp.jpg"></div></th>
+      </tr>
+      <tr>
+        <th><div class="tile" data-scale="2.4" data-image="./hw2/turn-in/ST2MainHall4027.jpg"></div></th>
+        <th><div class="tile" data-scale="2.4" data-image="./hw2/turn-in/ST2MainHall4027_blurred.jpg"></div></th>
+        <th><div class="tile" data-scale="2.4" data-image="./hw2/turn-in/ST2MainHall4027_canny.jpg"></div></th>
+        <th><div class="tile" data-scale="2.4" data-image="./hw2/turn-in/ST2MainHall4027_huff.jpg"></div></th>
+        <th><div class="tile" data-scale="2.4" data-image="./hw2/turn-in/ST2MainHall4027_huffp.jpg"></div></th>
+      </tr>
+      <tr>
+        <th><div class="tile" data-scale="2.4" data-image="./hw2/turn-in/ST2MainHall4028.jpg"></div></th>
+        <th><div class="tile" data-scale="2.4" data-image="./hw2/turn-in/ST2MainHall4028_blurred.jpg"></div></th>
+        <th><div class="tile" data-scale="2.4" data-image="./hw2/turn-in/ST2MainHall4028_canny.jpg"></div></th>
+        <th><div class="tile" data-scale="2.4" data-image="./hw2/turn-in/ST2MainHall4028_huff.jpg"></div></th>
+        <th><div class="tile" data-scale="2.4" data-image="./hw2/turn-in/ST2MainHall4028_huffp.jpg"></div></th>
+      </tr>
+      <tr>
+        <th><div class="tile" data-scale="2.4" data-image="./hw2/turn-in/ST2MainHall4029.jpg"></div></th>
+        <th><div class="tile" data-scale="2.4" data-image="./hw2/turn-in/ST2MainHall4029_blurred.jpg"></div></th>
+        <th><div class="tile" data-scale="2.4" data-image="./hw2/turn-in/ST2MainHall4029_canny.jpg"></div></th>
+        <th><div class="tile" data-scale="2.4" data-image="./hw2/turn-in/ST2MainHall4029_huff.jpg"></div></th>
+        <th><div class="tile" data-scale="2.4" data-image="./hw2/turn-in/ST2MainHall4029_huffp.jpg"></div></th>
+      </tr>
+    </table>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="zoompan.js"></script> 
+  </body>
+</html>
